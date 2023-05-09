@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="geral.css" />
+    <link rel="stylesheet" href="entrada.css" />
+
+    <title>Entrada</title>
+  </head>
+  <body>
+    <header>
+      <img src="Assets/buttons.svg" alt="" width="50" />
+      <h1 id="pagina">Entrada</h1>
+    </header>
+
+    <form>
+      <fieldset>
+        <legend>Registrar Venda</legend>
+
+        <label for="ovoBranco">Branco</label>
+        <input type="radio" name="corOvo" id="ovoBranco" value="ovoBranco" />
+        <label for="ovoVermelho">Vermelho</label>
+        <input
+          type="radio"
+          name="corOvo"
+          id="ovoVermelho"
+          value="ovoVermelho"
+        />
+        <br />
+        <select name="tamBandeja" id="tamBandeja" onclick="calcularValor()">
+          <option value="0.00">Tamanho</option>
+          <option value="23.99">30 Und</option>
+          <option value="18.00">20 Und</option>
+          <option value="15.00">15 Und</option>
+          <option value="8.00">10 Und</option>
+        </select>
+        <br /><br />
+
+        <button type="button" id="botaoMenos" onclick="quant('-')">-</button>
+
+        <input
+          type="number"
+          id="quantidade"
+          value="1"
+          readonly
+          onclick="mostrarTamanho()"
+        />
+        <button type="button" id="botaoMais" onclick="quant('+')">+</button>
+
+        <div id="preco"></div>
+      </fieldset>
+    </form>
+    <button id="botaoRegistrar" onclick="registrarVenda()">Registrar</button>
+
+    <main id="tela"></main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

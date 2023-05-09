@@ -1,0 +1,2 @@
+-ideia para selecionar o produto no momento de cadastrar venda
+usar optgroup
